@@ -1,0 +1,6 @@
+@PersonalityBaseballCards.Server_HostAddress = http://localhost:5299
+
+GET {{PersonalityBaseballCards.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
