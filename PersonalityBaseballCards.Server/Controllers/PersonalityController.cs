@@ -9,18 +9,20 @@ namespace PersonalityBaseballCards.Server.Controllers
     [ApiController]
     public class PersonalityController : ControllerBase
     {
+        private static IEnumerable<IPersonality> Personalities = PersonalitiesBuilder.Personalities;
+
         // GET: api/<PersonalityController>
         [HttpGet]
         public IEnumerable<IPersonality> Get()
         {
-            return PersonalitiesBuilder.Personalities;
+            return Personalities;
         }
 
         // GET api/<PersonalityController>/5
         [HttpGet("{code}")]
         public IPersonality Get(string code)
         {
-            return PersonalitiesBuilder.Personalities.Where(x => x.Code.ToLower().Equals(code.ToLower())).First();
+            return Personalities.Where(x => x.Code.ToLower().Equals(code.ToLower())).First();
         }
     }
 }

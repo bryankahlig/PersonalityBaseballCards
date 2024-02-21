@@ -9,7 +9,7 @@ namespace PersonalityBaseballCards.Server.Controllers
     [ApiController]
     public class LoveLanguagesController : ControllerBase
     {
-        IEnumerable<ILoveLanguage> LoveLanguages = LoveLanguagesBuilder.LoveLanguages;
+        private static IEnumerable<ILoveLanguage> LoveLanguages = LoveLanguagesBuilder.LoveLanguages;
 
         // GET: api/<LoveLanguagesController>
         [HttpGet]

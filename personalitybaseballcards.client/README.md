@@ -28,3 +28,15 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+## Plugins to install
+
+### ESLint
+```npm i --save-dev eslint eslint-plugin-react @typescript-eslint/eslint-plugin @typescript-eslint/parser```
+
+### ESLint TypeScript Parser
+npm i --save-dev @typescript-eslint/parser
+
+### Prettier
+```npm i --save-dev prettier eslint-config-prettier eslint-plugin-prettier```
