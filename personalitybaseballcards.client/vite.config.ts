@@ -53,6 +53,10 @@ export default defineConfig({
             '^/api/loveLanguages': {
                 target: 'https://localhost:7146/',
                 secure: false
+            },
+            '^/api/personality': {
+                target: 'https://localhost:7146/',
+                secure: false
             }
         },
         port: 5173,
