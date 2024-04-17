@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card.tsx';
+import DataEntry from './components/DataEntry.tsx';
 
 interface LoveLanguage {
     name: string;
@@ -18,8 +19,8 @@ function App() {
     const [personalities, setPersonalityTypes] = useState<Peronality[]>();
 
     useEffect(() => {
-        populateLoveLanguages();
-        populatePersonalityTypes();
+        void populateLoveLanguages();
+        void populatePersonalityTypes();
     }, []);
 
     const loveLanguagesContents = loveLanguages === undefined
@@ -64,8 +65,12 @@ function App() {
 
     return (
         <div>
+            <h1 id="tabelLabel">Personality Baseball Cards</h1>
             <div>
-                <Card img="https://via.placeholder.com/150" name="John Doe" personalityCode="INTJ" loveLanguage="Gifts" />
+                <DataEntry />
+            </div>
+            <div>
+                <Card img="https://via.placeholder.com/150" name="John Doe" personalityCode="INTJ" loveLanguage="Gifts" personalityDescription="blahblahblah" />
             </div>
             <h1 id="tabelLabel">Love Languages</h1>
             {loveLanguagesContents}

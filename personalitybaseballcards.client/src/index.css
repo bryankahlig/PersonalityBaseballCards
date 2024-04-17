@@ -66,3 +66,27 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.dataentry-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+    padding: 1em;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    border-color: #646cff;
+    border-width: 1px;
+    color: white;
+}
+
+input {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    transition: border-color 0.25s;
+    border-color: #646cff;
+    justify-content: right;
+}
