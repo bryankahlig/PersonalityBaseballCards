@@ -1,4 +1,4 @@
-﻿namespace PersonalityBaseballCards.Server.Models
+﻿namespace PersonalityBaseballCards.Models
 {
     public interface IPersonality
     {
