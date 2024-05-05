@@ -11,8 +11,12 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8'
-      - name: Build
-        run: dotnet build
+      - name: Build Server
+        run: dotnet build PersonalityBaseballCards.Server/PersonalityBaseballCards.Server.csproj
+      - name: Build Models
+        run: dotnet build PersonalityBaseballCards.Models/PersonalityBaseballCards.Models.csproj
+      - name: Build Unit Tests
+        run: dotnet build UnitTests/UnitTests.csproj
       - name: Install NUnit Console Runner
         run: nuget install NUnit.ConsoleRunner -Version 3.13.0 -OutputDirectory packages
       - name: Run Unit Tests
