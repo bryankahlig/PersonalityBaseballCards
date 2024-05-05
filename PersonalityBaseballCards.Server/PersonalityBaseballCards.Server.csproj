@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -24,6 +24,7 @@
     <ProjectReference Include="..\personalitybaseballcards.client\personalitybaseballcards.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
+    <ProjectReference Include="..\PersonalityBaseballCards.Models\PersonalityBaseballCards.Models.csproj" />
   </ItemGroup>
 
 </Project>
