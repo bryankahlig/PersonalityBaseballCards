@@ -12,7 +12,7 @@ jobs:
         with:
           dotnet-version: '8'
       - name: Build
-        run: dotnet build PersonalityBaseballCards.Server/PersonalityBaseballCards.Server.csproj
+        run: dotnet build
       - name: Install NUnit Console Runner
         run: nuget install NUnit.ConsoleRunner -Version 3.13.0 -OutputDirectory packages
       - name: Run Unit Tests
