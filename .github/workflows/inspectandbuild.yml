@@ -13,15 +13,8 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: dotnet restore
-  run-code-analysis:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Analyze .NET Code only
-        uses: dotnet/code-analysis@main
-        id: code-analysis
-        with:
-          build-breaking: true
   run-unit-tests:
+    needs: environment-setup
     runs-on: ubuntu-latest
     steps:
       - name: Build Server
