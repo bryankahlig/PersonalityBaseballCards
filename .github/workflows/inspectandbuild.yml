@@ -2,7 +2,7 @@ name: inspect-and-build
 run-name: ${{ github.actor }} inspecting and building the solution
 on: [push]
 jobs:
-  environment-setup:
+  run-unit-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Dot Net
@@ -13,10 +13,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Install dependencies
         run: dotnet restore
-  run-unit-tests:
-    needs: environment-setup
-    runs-on: ubuntu-latest
-    steps:
       - name: Build Server
         run: dotnet build PersonalityBaseballCards.Server/PersonalityBaseballCards.Server.csproj
       - name: Build Models
@@ -24,5 +20,4 @@ jobs:
       - name: Build Unit Tests
         run: dotnet build UnitTests/UnitTests.csproj
       - name: Run Unit Tests
-        run: dotnet test
-          
+        run: dotnet test          
