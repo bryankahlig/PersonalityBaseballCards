@@ -1,16 +1,29 @@
-name: run-unit-tests
-run-name: ${{ github.actor }} running unit tests
+name: inspect-and-build
+run-name: ${{ github.actor }} inspecting and building the solution
 on: [push]
 jobs:
-  run-unit-tests:
+  environment-setup:
     runs-on: ubuntu-latest
     steps:
-      - name: Check it out
-        uses: actions/checkout@v4
       - name: Setup Dot Net
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: '8'
+      - name: Check it out
+        uses: actions/checkout@v4
+      - name: Install dependencies
+        run: dotnet restore
+  run-code-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Analyze .NET Code only
+        uses: dotnet/code-analysis@v1
+        id: code-analysis
+        with:
+          build-breaking: true
+  run-unit-tests:
+    runs-on: ubuntu-latest
+    steps:
       - name: Build Server
         run: dotnet build PersonalityBaseballCards.Server/PersonalityBaseballCards.Server.csproj
       - name: Build Models
