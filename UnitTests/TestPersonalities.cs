@@ -18,10 +18,5 @@ namespace UnitTests
             Assert.That(personalityCount, Is.EqualTo(personalities.Count()));
         }
 
-        [Test]
-        public void TestingBadThingsHappening()
-        {
-            Assert.Fail("This test is designed to fail.");
-        }
     }
 }
