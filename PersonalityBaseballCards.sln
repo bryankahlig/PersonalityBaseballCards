@@ -10,14 +10,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{682E020A-EF53-47AA-A190-751B1E4B6F3E}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		.github\workflows\learn-github-actions.yml = .github\workflows\learn-github-actions.yml
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{5ABDD643-324C-4DB4-B0A8-C5C89FA6EF20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTests", "UnitTests\UnitTests.csproj", "{5ABDD643-324C-4DB4-B0A8-C5C89FA6EF20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonalityBaseballCards.Models", "Models\PersonalityBaseballCards.Models.csproj", "{5E373BF8-D0DA-4C01-99F5-910F003BADD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonalityBaseballCards.Models", "PersonalityBaseballCards.Models\PersonalityBaseballCards.Models.csproj", "{5E373BF8-D0DA-4C01-99F5-910F003BADD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
