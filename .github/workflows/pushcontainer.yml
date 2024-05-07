@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+
+env:
+    CONTAINER_TAG: returnonit.azurecr.io/returnonit/returnonit:latest    
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,4 +25,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ env.TEST_TAG }}
+          tags: ${{ env.CONTAINER_TAG }}
