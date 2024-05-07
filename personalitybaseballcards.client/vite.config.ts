@@ -46,16 +46,12 @@ export default defineConfig({
     },
     server: {
         proxy: {
-            '^/weatherforecast': {
-                target: 'https://localhost:7146/',
-                secure: false
-            },
             '^/api/loveLanguages': {
-                target: 'https://localhost:7146/',
+                target: 'http://localhost:5299/',
                 secure: false
             },
             '^/api/personality': {
-                target: 'https://localhost:7146/',
+                target: 'http://localhost:5299/',
                 secure: false
             }
         },

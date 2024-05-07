@@ -1,6 +1,10 @@
 @PersonalityBaseballCards.Server_HostAddress = http://localhost:5299
 
-GET {{PersonalityBaseballCards.Server_HostAddress}}/weatherforecast/
+GET {{PersonalityBaseballCards.Server_HostAddress}}/api/LoveLanguages/
 Accept: application/json
 
 ###
+
+GET {{PersonalityBaseballCards.Server_HostAddress}}/api/Personality/
+Accept: application/json
+
