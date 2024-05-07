@@ -1,5 +1,5 @@
-name: inspect-and-build
-run-name: ${{ github.actor }} inspecting and building the solution
+name: validate
+run-name: ${{ github.actor }} validating the app
 on: [push]
 jobs:
   run-unit-tests:
