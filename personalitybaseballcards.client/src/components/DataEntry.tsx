@@ -5,7 +5,7 @@ export default class DataEntry extends React.Component {
         return (
             <div className="dataentry-container">
                 <form>
-                    <div ><label for="name">Name:</label>
+                    <div ><label>Name:</label>
                         <div><input type="text" value="John Doe" id="name"/></div></div>
                     <div ><label>Personality:</label>
                         <div ><input type="text" value="INTJ" /></div></div>
