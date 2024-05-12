@@ -8,7 +8,7 @@ interface LoveLanguage {
     description: string;
 }
 
-interface Peronality {
+interface Personality {
     code: string;
     name: string;
     description: string;
@@ -16,12 +16,17 @@ interface Peronality {
 
 function App() {
     const [loveLanguages, setLoveLanguages] = useState<LoveLanguage[]>();
-    const [personalities, setPersonalityTypes] = useState<Peronality[]>();
+    const [personalities, setPersonalityTypes] = useState<Personality[]>();
+    const [errors, setErrors] = useState<string[]>();
 
     useEffect(() => {
         void populateLoveLanguages();
         void populatePersonalityTypes();
     }, []);
+
+    useEffect(() => {
+        console.log(errors);
+    }, [errors]);
 
     const loveLanguagesContents = loveLanguages === undefined
         ? <p><em>Loading... What what???? Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationreact">https://aka.ms/jspsintegrationreact</a> for more details.</em></p>
@@ -80,15 +85,17 @@ function App() {
     );
 
     async function populateLoveLanguages() {
-        const response = await fetch('api/loveLanguages');
-        const data = await response.json();
-        setLoveLanguages(data);
+        await fetch('api/loveLanguages')
+            .then(response => response.json())
+            .then(data => { setLoveLanguages(data) })
+            .catch(err => { setErrors([err]) });
     }
 
     async function populatePersonalityTypes() {
-        const response = await fetch('api/personality');
-        const data = await response.json();
-        setPersonalityTypes(data);
+        await fetch('api/personality')
+            .then(response => response.json())
+            .then(data => { setPersonalityTypes(data) })
+            .catch (err => { setErrors([err]) });
     }
 }
 
