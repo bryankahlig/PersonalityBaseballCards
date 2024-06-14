@@ -1,4 +1,4 @@
-![validate](https://github.com/bryankahlig/PersonalityBaseballCards/actions/workflows/validate.yml/badge.svg)
+![validate](https://github.com/bryankahlig/PersonalityBaseballCards/actions/workflows/ci.yml/badge.svg)
 
 # PersonalityBaseballCards
 Combining the lenses of personalities of Myers Briggs and Love Languages, this will create a baseball card for the person you want to know better.
