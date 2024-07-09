@@ -1,0 +1,6 @@
+services:
+  web:
+    image: returnonit.azurecr.io/returnonit/returnonit:latest
+    ports:
+      - "8080:80"
+       
