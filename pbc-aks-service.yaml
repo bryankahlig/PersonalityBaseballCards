@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pbc-aks-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: pbc-aks
+  ports:
+  - port: 80
+    targetPort: 80

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pbc-aks
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pbc-aks
+  template:
+    metadata:
+      labels:
+        app: pbc-aks
+    spec:
+      containers:
+      - name: pbc-aks
+        image: returnonit.azurecr.io/returnonit/returnonit:latest
+        ports:
+        - containerPort: 80
