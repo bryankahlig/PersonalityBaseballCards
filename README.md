@@ -22,12 +22,17 @@ Started with "React and ASP.NET Core" template in Visual Studio 2022
 Set up AKS cluster
 
 In Terminal Run:
-az aks get-credentials --resource-group PersonalityBaseballCards --name PersonalityBaseballCards
+ az aks get-credentials --resource-group PersonalityBaseballCards --name PersonalityBaseballCards
 az aks create --resource-group PersonalityBaseballCards --name PersonalityBaseballCards --generate-ssh-keys --tier free
 az aks update --resource-group PersonalityBaseballCards --name PersonalityBaseballCards --attach-acr returnonit
 
 kubectl apply -f pbc-aks-deployment.yaml
 kubectl apply -f pbc-aks-service.yaml
+
+## Items to note:
+* The app deploys where the DotNet Core app is listening on /api and the React app is listening on /.
+* The app is listening on port 5299. It can be anything, but it's important to align the port in the container with the port being forwarded at all points in the stack.
+
 
 In Azure Portal:
 Go to AKS Cluster -> Kubernetes resources -> Services and Ingress -> Create Ingress
