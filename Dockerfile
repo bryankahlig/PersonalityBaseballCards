@@ -3,7 +3,8 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
 EXPOSE 5299
-EXPOSE 5173
+
+ENV ASPNETCORE_URLS=http://+:5299
 
 RUN apt-get update
 RUN apt-get install -y curl
