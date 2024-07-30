@@ -16,4 +16,4 @@ spec:
       - name: pbc-aks
         image: returnonit.azurecr.io/returnonit/returnonit:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5299

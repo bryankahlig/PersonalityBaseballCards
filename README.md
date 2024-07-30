@@ -32,6 +32,15 @@ kubectl apply -f pbc-aks-service.yaml
 In Azure Portal:
 Go to AKS Cluster -> Kubernetes resources -> Services and Ingress -> Create Ingress
 Will then request to enable Application Routing add-on, Secret Store CSI driver
+
 Trying to create Ingress again will then guide you to create a Key Vault
-The Key Vault will take some time to setup
+This is the command used to setup access to the Key Vault:
+az role assignment create --role "Key Vault Reader" --assignee bryan.kahlig@returnonit.io --scope /subscriptions/d441e080-fce9-46c2-b6b4-268684a3391a/resourcegroups/baseballcards.dev
+
+Now setup virtual network between AKS and AKV: https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver
+Set up peering for the virtual network: https://learn.microsoft.com/en-us/troubleshoot/azure/azure-kubernetes/extensions/troubleshoot-key-vault-csi-secrets-store-csi-driver
+Set up firewall rules for the Key Vault
+May need to come back to this
 Next step is to Create Ingress again
+
+Create Ingress Controller for pbc-aks-cluster / Settings / Networking
