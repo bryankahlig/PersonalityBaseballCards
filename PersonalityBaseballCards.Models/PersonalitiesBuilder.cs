@@ -37,8 +37,8 @@
             new Personality
             {
                 Code = "ISTP",
-                Name = "TODO",
-                Description = "TODO."
+                Name = "Virtuoso",
+                Description = "Diligently and skeptically curious builders that love rolling up their sleeves."
             },
             new Personality
             {
@@ -49,8 +49,8 @@
             new Personality
             {
                 Code = "ISFP",
-                Name = "TODO",
-                Description = "TODO."
+                Name = "Adventurer",
+                Description = "Open minded and loves to explore. Finds joy in everyday life with a strong sense of fairness."
             },
             new Personality
             {
@@ -91,14 +91,14 @@
             new Personality
             {
                 Code = "ESTP",
-                Name = "TODO",
-                Description = "TODO."
+                Name = "Entrepreneur",
+                Description = "Charming, witty, and can make things happen."
             },
             new Personality
             {
                 Code = "ESFP",
-                Name = "TODO",
-                Description = "TODO."
+                Name = "Entertainer",
+                Description = "Spontaneous, resourceful, and outgoing with a keen aesthetic sense."
             }
         };
     }
