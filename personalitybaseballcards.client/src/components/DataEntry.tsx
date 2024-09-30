@@ -1,6 +1,4 @@
 import React from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import type { PropsWithChildren } from 'react';
 
 export default class DataEntry extends React.Component {
     render() {
