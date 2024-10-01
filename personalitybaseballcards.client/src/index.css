@@ -90,3 +90,14 @@ input {
     border-color: #646cff;
     justify-content: right;
 }
+
+.flex-container {
+    display: flex;
+    -ms-flex-direction: row;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-item {
+    margin: 5px;
+}
