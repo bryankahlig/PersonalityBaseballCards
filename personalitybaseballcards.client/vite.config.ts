@@ -42,7 +42,8 @@ export default defineConfig({
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))
-        }
+        },
+        conditions: ['module', 'browser', 'development|production'],
     },
     server: {
         proxy: {
