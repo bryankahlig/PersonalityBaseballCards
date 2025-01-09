@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default class DataEntry extends React.Component {
-    constructor(defaultValue: {}) {
+    constructor(defaultValue: object) {
         super(defaultValue);
     }
     render() {
