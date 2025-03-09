@@ -75,7 +75,7 @@ function App() {
                 <DataEntry />
             </div>
             <div>
-                <Card img="https://via.placeholder.com/150" name="John Doe" personalityCode="INTJ" loveLanguage="Gifts" personalityDescription="blahblahblah" />
+                <Card img="https://placehold.co/150x150/png" name="John Doe" personalityCode="INTJ" loveLanguage="Gifts" personalityDescription="blahblahblah" />
             </div>
             <h1 id="tabelLabel">Love Languages</h1>
             {loveLanguagesContents}
