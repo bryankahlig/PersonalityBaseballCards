@@ -18,6 +18,14 @@ Started with "React and ASP.NET Core" template in Visual Studio 2022
 * Frontend
   * React
 
+# Local development with SSL
+If you receive a certificate error, run the following command in a terminal:
+```
+dotnet dev-certs https --clean
+dotnet dev-certs https --trust
+```
+Restart the debug session and it should work.
+
 # Activites
 Set up AKS cluster
 
