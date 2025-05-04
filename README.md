@@ -17,6 +17,7 @@ Started with "React and ASP.NET Core" template in Visual Studio 2022
   * ASP.NET Core 8
 * Frontend
   * React
+  * React Bootstrap
 
 # Local development with SSL
 If you receive a certificate error, run the following command in a terminal:

@@ -28,7 +28,7 @@ function PulldownMenu({ options, onSelect, buttonText }) {
 
     return (
         <div className="pulldown-menu" ref={menuRef}>
-            <button onClick={toggleMenu}>{buttonText}</button>
+            <button onClick={toggleMenu} class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown">{buttonText}</button>
             {isOpen && (
                 <ul>
                     {options.map((option) => (

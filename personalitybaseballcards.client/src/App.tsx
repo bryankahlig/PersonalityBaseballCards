@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card.tsx';
 import DataEntry from './components/DataEntry.tsx';
+import 'bootstrap/dist/css/bootstrap.css';
 
 interface LoveLanguage {
     name: string;
