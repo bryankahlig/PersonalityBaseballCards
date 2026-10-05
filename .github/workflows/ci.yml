@@ -1,18 +1,35 @@
 name: CI - build and validate project
 run-name: ${{ github.actor }} working the workflow
-on: [push]
-
-env:
-    CONTAINER_TAG: returnonit.azurecr.io/returnonit/returnonit:latest   
+on: [push, pull_request]
 
 jobs:
+  validate-frontend:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: personalitybaseballcards.client
+    steps:
+      - name: Check it out
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: personalitybaseballcards.client/package-lock.json
+      - name: Install frontend dependencies
+        run: npm ci
+      - name: Build frontend
+        run: npm run build
+      - name: Lint frontend
+        run: npm run lint
   run-unit-tests:
     runs-on: ubuntu-latest
     steps:
       - name: Setup Dot Net
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '8'
+          dotnet-version: '8.0.x'
       - name: Check it out
         uses: actions/checkout@v4
       - name: Install dependencies
